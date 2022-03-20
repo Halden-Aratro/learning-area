@@ -41,6 +41,16 @@
     ]
 
     // Add your code here
+    for (let i = 0; i < phonebook.length; i++) {
+      if (phonebook[i].name === name) {
+        para.textContent = `name: ${phonebook[i]['name']} | number: ${phonebook[i]["number"]}`; //Putting 2 ways of writing the command
+        para.textContent = `name is ${phonebook[i].name} | phone number is ${phonebook[i].name}`; //The second line overwrites the first one
+        break;
+      } else {
+        para.textContent = 'Not found';
+      }
+    }
+
 
     // Don't edit the code below here!
     const section = document.querySelector('section');
